@@ -1,43 +1,3 @@
-/*
-Template Name: Tunis
-Author: ib-themes
-Author URI: http://themeforest.net/user/ib-themes
-Description: Tunis - Personal Portfolio React Template
-Version: 1.0
-*/
-
-/*------------------------------------------------------------------
-[Table of contents]
-	+ General
-	    - Miscellaneous
-		- Light Body
-		- Buttons
-		- Page Title
-	+ Header
-		- Desktop Navigation
-		- Mobile Navigation
-	+ Pages
-		- Homepage
-		+ About
-		    - Personal Info List
-			- Box Stats
-			- Resume
-			- Skills
-		+ Portfolio
-		    - Grid
-		    + Slideshow
-                - Embedded Videos
-                - Carousel
-                - Navigation
-        + Contact
-            - Left Side
-            - Contact Form
-		+ Blog
-            - Latest Posts
-            - Pagination
-	- Responsive Design Styles
--------------------------------------------------------------------*/
-
 /* [ GENERAL ] */
 /*================================================== */
 
@@ -1684,6 +1644,7 @@ body.light .contact .custom-span-contact a {
   .main-img-mobile {
     width: 230px;
     height: 230px;
+    object-fit: cover;
   }
   .title-section {
     padding-left: 15px;
