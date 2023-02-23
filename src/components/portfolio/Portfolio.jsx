@@ -18,17 +18,17 @@ const Portfolio = () => {
         <Tabs>
           <TabList className="portfolio-tab-list" data-aos="fade-up">
             <Tab>ALL</Tab>
-            <Tab>LOGO</Tab>
-            <Tab>VIDEO</Tab>
-            <Tab>GRAPHIC DESIGN</Tab>
-            <Tab>MOCKUP</Tab>
+            <Tab>Finance</Tab>
+            <Tab>Hospitality</Tab>
+            <Tab>Travel</Tab>
+            <Tab>Transport</Tab>
           </TabList>
 
           <div className="container">
             <TabPanel>
               <div className="tab-container">
                 {PortfolioData.map((item) => {
-                  const { id, type, image, delayAnimation } = item;
+                  const { id, type, image, delayAnimation,color } = item;
 
                   return (
                     <div
@@ -40,8 +40,8 @@ const Portfolio = () => {
                         className="tab-content"
                         onClick={() => handleModal(id)}
                       >
-                        <img src={image} alt="portfolio project demo" />
-                        <h3>
+                        <img src={image} alt="portfolio project demo" style={{objectFit: 'cover'}} />
+                        <h3 style={{backgroundColor: color}}>
                           <span className="conent-title">{type}</span>
                         </h3>
                       </div>
@@ -53,9 +53,9 @@ const Portfolio = () => {
 
             <TabPanel>
               <div className="tab-container">
-                {PortfolioData.filter((item) => item.tag.includes("logo")).map(
+                {PortfolioData.filter((item) => item.tag.includes("Finance")).map(
                   (item) => {
-                    const { id, type, image, delayAnimation } = item;
+                    const { id, type, image, delayAnimation,color } = item;
                     return (
                       <div
                         key={id}
@@ -67,7 +67,35 @@ const Portfolio = () => {
                           onClick={() => handleModal(id)}
                         >
                           <img src={image} alt="portfolio project demo" />
-                          <h3>
+                          <h3 style={{backgroundColor: color}}>
+                            <span className="conent-title">{type}</span>
+                          </h3>
+                        </div>
+                        {/* {getModal && <Modal props={modalId} />} */}
+                      </div>
+                    );
+                  }
+                )}
+              </div>
+            </TabPanel>
+            
+            <TabPanel>
+              <div className="tab-container">
+                {PortfolioData.filter((item) => item.tag.includes("hospitality")).map(
+                  (item) => {
+                    const { id, type, image, delayAnimation,color } = item;
+                    return (
+                      <div
+                        key={id}
+                        data-aos="fade-right"
+                        data-aos-delay={delayAnimation}
+                      >
+                        <div
+                          className="tab-content"
+                          onClick={() => handleModal(id)}
+                        >
+                          <img src={image} alt="portfolio project demo" />
+                          <h3 style={{backgroundColor: color}}>
                             <span className="conent-title">{type}</span>
                           </h3>
                         </div>
@@ -81,9 +109,9 @@ const Portfolio = () => {
 
             <TabPanel>
               <div className="tab-container">
-                {PortfolioData.filter((item) => item.tag.includes("video")).map(
+                {PortfolioData.filter((item) => item.tag.includes("Travel")).map(
                   (item) => {
-                    const { id, type, image, delayAnimation } = item;
+                    const { id, type, image, delayAnimation,color } = item;
                     return (
                       <div
                         key={id}
@@ -95,7 +123,7 @@ const Portfolio = () => {
                           onClick={() => handleModal(id)}
                         >
                           <img src={image} alt="portfolio project demo" />
-                          <h3>
+                          <h3 style={{backgroundColor: color}}>
                             <span className="conent-title">{type}</span>
                           </h3>
                         </div>
@@ -110,9 +138,9 @@ const Portfolio = () => {
             <TabPanel>
               <div className="tab-container">
                 {PortfolioData.filter((item) =>
-                  item.tag.includes("graphic design")
+                  item.tag.includes("Transport")
                 ).map((item) => {
-                  const { id, type, image, delayAnimation } = item;
+                  const { id, type, image, delayAnimation,color } = item;
                   return (
                     <div
                       key={id}
@@ -124,7 +152,7 @@ const Portfolio = () => {
                         onClick={() => handleModal(id)}
                       >
                         <img src={image} alt="portfolio project demo" />
-                        <h3>
+                        <h3 style={{backgroundColor: color}}>
                           <span className="conent-title">{type}</span>
                         </h3>
                       </div>
@@ -138,9 +166,9 @@ const Portfolio = () => {
             <TabPanel>
               <div className="tab-container">
                 {PortfolioData.filter((item) =>
-                  item.tag.includes("mockup")
+                  item.tag.includes("hospitality")
                 ).map((item) => {
-                  const { id, type, image, delayAnimation } = item;
+                  const { id, type, image, delayAnimation,color } = item;
                   return (
                     <div
                       key={id}
@@ -152,7 +180,7 @@ const Portfolio = () => {
                         onClick={() => handleModal(id)}
                       >
                         <img src={image} alt="portfolio project demo" />
-                        <h3>
+                        <h3 style={{backgroundColor: color}}>
                           <span className="conent-title">{type}</span>
                         </h3>
                       </div>

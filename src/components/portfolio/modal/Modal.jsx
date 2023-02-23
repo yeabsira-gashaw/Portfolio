@@ -1,7 +1,6 @@
 import React from "react";
-import img1 from "../../../assets/img/portfolio/project-1.jpg";
-import img2 from "../../../assets/img/portfolio/project-2.jpg";
-import portfolioVideo from "../../../assets/img/portfolio/video.mp4";
+import img1 from "../../../assets/img/portfolio/portfolio-getrooms.png";
+import img2 from "../../../assets/img/portfolio/portfolio-dubeale.png";
 import CloseImg from "../../../assets/img/cancel.svg";
 import PortfolioData from "../portfolioData";
 import Slider from "react-slick";
@@ -36,25 +35,11 @@ const Modal = ({ modalId, setGetModal }) => {
                       <div key={i} className="row open-sans-font">
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-file-text-o pr-2"></i>
-                          Project:{" "}
+                          Project : {" "}
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                        
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
@@ -109,21 +94,7 @@ const Modal = ({ modalId, setGetModal }) => {
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                        
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
@@ -140,13 +111,8 @@ const Modal = ({ modalId, setGetModal }) => {
                     );
                   })}
                 </div>
-                <figure className="modal__img videocontainer">
-                  <iframe
-                    src="https://www.youtube.com/embed/7e90gBu4pas"
-                    title="YouTube video player"
-                    className="youtube-video"
-                    allowFullScreen
-                  ></iframe>
+                <figure className="modal__img">
+                  <img src={item.image} alt="portfolio project demo" />
                 </figure>
 
                 <button
@@ -184,21 +150,7 @@ const Modal = ({ modalId, setGetModal }) => {
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                        
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
@@ -264,21 +216,7 @@ const Modal = ({ modalId, setGetModal }) => {
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                        
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
@@ -296,16 +234,7 @@ const Modal = ({ modalId, setGetModal }) => {
                   })}
                 </div>
                 <figure className="modal__img">
-                  {/* <img src={item.image} alt="portfolio project demo" /> */}
-                  <video
-                    id="video"
-                    className="responsive-video"
-                    controls
-                    poster={item.image}
-                  >
-                    <source src={portfolioVideo} type="video/mp4" />
-                    {/* <source src="img/" type="video/mp4" /> */}
-                  </video>
+                  <img src={item.image} alt="portfolio project demo" />
                 </figure>
 
                 <button
@@ -343,21 +272,7 @@ const Modal = ({ modalId, setGetModal }) => {
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                       
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
@@ -413,21 +328,7 @@ const Modal = ({ modalId, setGetModal }) => {
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                        
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
@@ -483,21 +384,7 @@ const Modal = ({ modalId, setGetModal }) => {
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                        
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
@@ -549,25 +436,11 @@ const Modal = ({ modalId, setGetModal }) => {
                       <div key={i} className="row open-sans-font">
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-file-text-o pr-2"></i>
-                          Project:{" "}
+                          Project : {" "}
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                        
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
@@ -623,21 +496,7 @@ const Modal = ({ modalId, setGetModal }) => {
                           <span className="ft-wt-600 uppercase">
                             {details.project}
                           </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-user-o pr-2"></i>
-                          Client :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.client}
-                          </span>
-                        </div>
-                        <div className="col-12 col-sm-6 mb-2">
-                          <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
-                          <span className="ft-wt-600 uppercase">
-                            {details.language}
-                          </span>
-                        </div>
+                        </div>                       
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-external-link pr-2"></i>
                           Preview :{" "}
